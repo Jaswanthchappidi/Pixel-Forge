@@ -9,6 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "dependencies": {
     "@imgly/background-removal": "^1.7.0",
     "browser-image-compression": "^2.0.2",
