@@ -1,5 +1,0 @@
-[10:15 am, 16/03/2026] J: 1.font should be change from googl popings
-2.all the 13 has to give the previews
-[10:18 am, 16/03/2026] J: 3.navigation bar lo theme toggle to sun dark
-[10:20 am, 16/03/2026] J: 4.glass and blur smooth animation with gsab components 
-glowing components and that should be medium and it is userfriendly
