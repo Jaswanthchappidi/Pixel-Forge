@@ -1,0 +1,102 @@
+.history-list { display: flex; flex-direction: column; gap: 8px; }
+
+.history-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 24px;
+  color: var(--text-3);
+  font-size: 0.8rem;
+  text-align: center;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-lg);
+}
+.history-empty svg { opacity: 0.3; }
+.history-empty p { color: var(--text-3); }
+
+.history-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  animation: fadeUp 0.3s ease both;
+}
+.history-card:hover {
+  border-color: var(--border-2);
+  background: var(--surface2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.history-thumb {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+  background:
+    repeating-conic-gradient(rgba(255,255,255,0.04) 0% 25%, transparent 0% 50%)
+    0 0 / 12px 12px;
+  border: 1px solid var(--border);
+}
+.history-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.history-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.history-name {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.history-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.history-fmt {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  background: var(--surface3);
+  border-radius: 4px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+.history-size {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-3);
+}
+.history-time {
+  font-size: 0.6rem;
+  color: var(--text-4);
+  margin-top: 2px;
+}
+
+.history-actions { display: flex; gap: 6px; }
+.h-action {
+  width: 30px; height: 30px;
+  background: var(--surface2);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.h-action:hover.dl { border-color: var(--accent); color: var(--accent); background: var(--accent-glow2); }
+.h-action:hover.del { border-color: var(--danger); color: var(--danger); }

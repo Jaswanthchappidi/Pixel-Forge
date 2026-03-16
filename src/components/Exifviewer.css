@@ -1,0 +1,76 @@
+.exif-wrap { display: flex; flex-direction: column; gap: 12px; }
+
+.exif-loading {
+  font-size: 0.75rem; color: var(--text-3);
+  font-family: var(--font-mono);
+  padding: 16px; text-align: center;
+}
+.exif-empty {
+  font-size: 0.75rem; color: var(--text-3);
+  padding: 16px; text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius); font-family: var(--font-mono);
+}
+
+.exif-grid {
+  display: flex; flex-direction: column; gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.exif-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+.exif-row:last-of-type { border-bottom: none; }
+.exif-row:hover { background: var(--glass); }
+
+.exif-icon  { font-size: 0.85rem; flex-shrink: 0; width: 20px; text-align: center; }
+.exif-label {
+  font-size: 0.7rem; font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  min-width: 110px; flex-shrink: 0;
+}
+.exif-value {
+  font-size: 0.75rem; color: var(--text);
+  font-family: var(--font-mono);
+  margin-left: auto; text-align: right;
+  max-width: 160px; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap;
+}
+
+.exif-map-link {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 12px;
+  font-size: 0.72rem; color: var(--accent);
+  text-decoration: none; font-family: var(--font-mono);
+  border-top: 1px solid var(--border);
+  transition: var(--transition);
+}
+.exif-map-link:hover { background: var(--accent-glow2); }
+
+.exif-actions {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.exif-strip-btn {
+  display: flex; align-items: center; gap: 7px;
+  padding: 9px 16px;
+  background: var(--surface2);
+  border: 1px solid rgba(255,77,106,0.3);
+  color: var(--danger); border-radius: var(--radius-sm);
+  font-size: 0.75rem; font-weight: 600;
+  transition: var(--transition);
+}
+.exif-strip-btn:hover { background: var(--danger-glow); }
+.exif-stripped {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.72rem; color: var(--success);
+  font-family: var(--font-mono);
+  animation: fadeUp 0.3s ease;
+}
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }

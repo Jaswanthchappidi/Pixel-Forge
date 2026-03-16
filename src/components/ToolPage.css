@@ -1,0 +1,76 @@
+.tool-page { display: flex; flex-direction: column; min-height: calc(100vh - 58px); }
+
+/* Breadcrumb */
+.tool-page-nav {
+  background: var(--bg-primary); border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.tool-page-nav-inner { max-width: 960px; margin: 0 auto; }
+.back-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 0;
+  font-size: 0.8rem; font-weight: 500; color: var(--text-secondary);
+  text-decoration: none; transition: color 0.15s;
+}
+.back-link:hover { color: var(--text-primary); }
+
+/* Hero */
+.tool-page-hero {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+  padding: 36px 24px;
+}
+.tool-page-hero-inner {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center; gap: 20px;
+  flex-wrap: wrap;
+}
+.tool-page-icon {
+  width: 64px; height: 64px; border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.tool-page-meta { flex: 1; min-width: 0; }
+.tool-page-title-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.tool-page-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem; font-weight: 800;
+  color: var(--text-primary); letter-spacing: -0.02em;
+}
+.tool-page-badge {
+  font-size: 0.55rem; font-weight: 800;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 5px; color: #fff;
+}
+.tool-page-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; max-width: 500px; }
+
+.tool-page-private-badge {
+  margin-left: auto;
+  font-size: 0.72rem; color: var(--text-secondary);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+
+/* Content */
+.tool-page-content {
+  flex: 1; padding: 32px 24px; background: var(--bg-secondary);
+}
+.tool-page-content-inner {
+  max-width: 960px; margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+@media (max-width: 640px) {
+  .tool-page-hero { padding: 24px 16px; }
+  .tool-page-content { padding: 16px; }
+  .tool-page-content-inner { padding: 18px; }
+  .tool-page-private-badge { display: none; }
+}

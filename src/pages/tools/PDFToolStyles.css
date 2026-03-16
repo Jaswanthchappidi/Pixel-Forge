@@ -1,0 +1,20 @@
+/* Shared styles for PDF tools */
+.pdf-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pdf-preview-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.pdf-file-icon {
+  margin-bottom: 16px;
+  color: var(--accent);
+}
