@@ -43,11 +43,11 @@ export function QROverlay({ file, editedCanvas }) {
     return () => { cancelled = true }
   }, [url, bgStyle])
 
-  // Live canvas preview
+  // Live canvas previews
   useEffect(() => {
     if (!file || !qrPreview) return
     renderPreview()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-depswhy its happen
   }, [file, editedCanvas, qrPreview, position, qrSize, margin, opacity])
 
   async function renderPreview() {

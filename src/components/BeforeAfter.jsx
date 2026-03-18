@@ -13,16 +13,16 @@ export function BeforeAfter({ originalFile, editedCanvas }) {
   useEffect(() => {
     if (!originalFile) return
     const url = URL.createObjectURL(originalFile)
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOrigUrl(url)
     return () => URL.revokeObjectURL(url)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [originalFile])
 
   // Capture edited canvas as data URL
   useEffect(() => {
     if (!editedCanvas) return
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEditedUrl(editedCanvas.toDataURL('image/png'))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editedCanvas])
 
   function getPct(clientX) {

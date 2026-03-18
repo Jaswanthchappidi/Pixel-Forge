@@ -39,22 +39,7 @@ const AddPageNumbersPDFPage = lazy(() => import('./pages/tools/AddPageNumbersPDF
 const AddWatermarkPDFPage   = lazy(() => import('./pages/tools/AddWatermarkPDFPage'))
 const PDFMetadataPage       = lazy(() => import('./pages/tools/PDFMetadataPage'))
 
-// Utility tools
-const QRGeneratorPage     = lazy(() => import('./pages/tools/QRGeneratorPage'))
-const QRScannerPage       = lazy(() => import('./pages/tools/QRScannerPage'))
-const ColorPickerPage     = lazy(() => import('./pages/tools/ColorPickerPage'))
-const TextToSpeechPage    = lazy(() => import('./pages/tools/TextToSpeechPage'))
-const SpeechToTextPage    = lazy(() => import('./pages/tools/SpeechToTextPage'))
-const UUIDGenPage         = lazy(() => import('./pages/tools/UUIDGenPage'))
-const PasswordGenPage     = lazy(() => import('./pages/tools/PasswordGenPage'))
-const Base64TextPage      = lazy(() => import('./pages/tools/Base64TextPage'))
-const JSONFormatterPage   = lazy(() => import('./pages/tools/JSONFormatterPage'))
-const URLEncoderPage      = lazy(() => import('./pages/tools/URLEncoderPage'))
-
-const W = (props) => {
-  const { Component: C } = props
-  return <Suspense fallback={<LoadingScreen />}><C /></Suspense>
-}
+const W = ({ Component }) => <Suspense fallback={<LoadingScreen />}><Component /></Suspense>
 
 export default function App() {
   return (
@@ -95,18 +80,6 @@ export default function App() {
           <Route path="tools/add-page-numbers"   element={<W Component={AddPageNumbersPDFPage} />} />
           <Route path="tools/add-watermark-pdf"  element={<W Component={AddWatermarkPDFPage}   />} />
           <Route path="tools/pdf-metadata"       element={<W Component={PDFMetadataPage}       />} />
-
-          {/* Utility tools */}
-          <Route path="tools/qr-generator"     element={<W Component={QRGeneratorPage}     />} />
-          <Route path="tools/qr-scanner"       element={<W Component={QRScannerPage}       />} />
-          <Route path="tools/gen-color-picker" element={<W Component={ColorPickerPage}     />} />
-          <Route path="tools/text-to-speech"   element={<W Component={TextToSpeechPage}    />} />
-          <Route path="tools/speech-to-text"   element={<W Component={SpeechToTextPage}    />} />
-          <Route path="tools/uuid-generator"   element={<W Component={UUIDGenPage}         />} />
-          <Route path="tools/password-generator" element={<W Component={PasswordGenPage}   />} />
-          <Route path="tools/base64-text"      element={<W Component={Base64TextPage}      />} />
-          <Route path="tools/json-formatter"   element={<W Component={JSONFormatterPage}   />} />
-          <Route path="tools/url-encoder"      element={<W Component={URLEncoderPage}      />} />
         </Route>
       </Routes>
     </BrowserRouter>
